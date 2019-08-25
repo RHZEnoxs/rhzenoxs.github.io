@@ -8,9 +8,37 @@ $(function () {
     var $queryAppInfoByMultiNameBtn = $('#queryAppInfoByMultiNameBtn');
     var $queryAppInfoByMultiIdBtn = $('#queryAppInfoByMultiIdBtn');
     var $queryAppInfoByAppInfoObjectBtn = $('#queryAppInfoByAppInfoObjectBtn');
+    
+    var appInfoData = [
+        {
+         appId : '1',
+         appName : 'JavaProjSE-v1.0.3',
+         appVersion : '1.0.3',
+         appDate : '2019/07/24',
+         appAuthor : 'Enoxs',
+         appRemark : 'Java Project Simple Example - Version 1.0.3'
+        },
+        {
+         appId : '2',
+         appName : 'JUnitSE',
+         appVersion : '1.0.2',
+         appDate : 'not init',
+         appAuthor : 'Enoxs',
+         appRemark : 'Java Unit Test Simple Example'
+        },
+        {
+         appId : '3',
+         appName : 'SpringMVC-SE',
+         appVersion : '1.0.2',
+         appDate : '2019/07/31',
+         appAuthor : 'Enoxs',
+         appRemark : 'Java Web Application Spring MVC 框架 - Simple Example 未整合持久化框架（MyBatis）'
+        }
+        
+    ];
 
     $queryAppInfoByPositionBtn.off('click').on('click', function () {
-        var postUrl = '../../ajax/appInfo/queryAppInfoByPosition.json';
+        /*var postUrl = 'appInfo/queryAppInfoByPosition';
         var formData = {
             position: 0
         };
@@ -23,11 +51,13 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var appInfo = appInfoData[0];
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByIdBtn.off('click').on('click' , function(){
-        var postUrl = 'appInfo/queryAppInfoById';
+        /*var postUrl = 'appInfo/queryAppInfoById';
         var formData = {
             id: 2
         };
@@ -40,11 +70,13 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var appInfo = appInfoData[1];
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByNameBtn.off('click').on('click' , function(){
-        var postUrl = 'appInfo/queryAppInfoByName';
+        /*var postUrl = 'appInfo/queryAppInfoByName';
         var formData = {
             name: 'SpringMVC'
         };
@@ -57,11 +89,13 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var appInfo = appInfoData[2];
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByIdAndNameBtn.off('click').on('click' , function(){
-        var postUrl = 'appInfo/queryAppInfoByIdAndName';
+        /*var postUrl = 'appInfo/queryAppInfoByIdAndName';
         var formData = {
             id : 1,
             name: 'JavaProjSE-v1.0.3'
@@ -75,11 +109,13 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var appInfo = appInfoData[0];
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByMultiPostionBtn.off('click').on('click' , function(){
-        var postUrl = 'appInfo/queryAppInfoByMultiPostion';
+        /*var postUrl = 'appInfo/queryAppInfoByMultiPostion';
 
         var positions = [ 0 , 2];
         var formData = {
@@ -95,11 +131,15 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var lstAppInfo = new Array();
+        lstAppInfo.push(appInfoData[0]);
+        lstAppInfo.push(appInfoData[2]);
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByMultiNameBtn.off('click').on('click' , function(){
-        var postUrl = 'appInfo/queryAppInfoByMultiName';
+        /*var postUrl = 'appInfo/queryAppInfoByMultiName';
 
         var names = new Array();
         names.push("JavaProjSE-v1.0.3");
@@ -118,7 +158,11 @@ $(function () {
                 alert(response.desc);
             }
         }).always(function () {
-        });
+        });*/
+        var lstAppInfo = new Array();
+        lstAppInfo.push(appInfoData[0]);
+        lstAppInfo.push(appInfoData[1]);
+        showAppInfoDetailAtConsole(appInfo);
     });
 
     $queryAppInfoByMultiIdBtn.off('click').on('click' , function(){
@@ -136,7 +180,7 @@ $(function () {
             }
         }).always(function () {
         });*/
-        $.ajax({
+        /*$.ajax({
             type: "POST",
             url: postUrl,
             contentType: "application/json; charset=utf-8",
@@ -148,7 +192,7 @@ $(function () {
             error: function(resp) {
                 alert(resp)
             }
-        });
+        });*/
     });
 
 
