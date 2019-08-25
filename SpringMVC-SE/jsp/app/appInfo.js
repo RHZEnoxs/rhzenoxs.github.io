@@ -135,7 +135,7 @@ $(function () {
         var lstAppInfo = new Array();
         lstAppInfo.push(appInfoData[0]);
         lstAppInfo.push(appInfoData[2]);
-        showAppInfoDetailAtConsole(appInfo);
+        showMultiAppInfoDetailAtConsole(lstAppInfo);
     });
 
     $queryAppInfoByMultiNameBtn.off('click').on('click' , function(){
@@ -162,14 +162,14 @@ $(function () {
         var lstAppInfo = new Array();
         lstAppInfo.push(appInfoData[0]);
         lstAppInfo.push(appInfoData[1]);
-        showAppInfoDetailAtConsole(appInfo);
+        showMultiAppInfoDetailAtConsole(lstAppInfo);
     });
 
     $queryAppInfoByMultiIdBtn.off('click').on('click' , function(){
         var postUrl = 'appInfo/queryAppInfoByMultiId';
         var lstId = [1,2,3];
         var formData = JSON.stringify(lstId);
-
+        $console.text("In development");
         /*$.post(postUrl, formData, function (data, status) {
             var response = JSON.parse(decodeURIComponent(data));
             if (response.status == 'success') {
@@ -193,6 +193,11 @@ $(function () {
                 alert(resp)
             }
         });*/
+        
+    });
+    
+    $queryAppInfoByAppInfoObjectBtn.off('click').on('click' , function(){
+        $console.text("In development");
     });
 
 
