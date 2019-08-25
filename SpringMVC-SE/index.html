@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SpringMVC-SE</title>
+    <meta charset="UTF-8">
+    <script src="static/jquery/jquery-3.4.1.js"></script>
+    <script src="static/jquery/jquery-ui.js"></script>
+    <link href="static/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="static/style/common.css" rel="stylesheet">
+</head>
+
+<body bgcolor="black">
+
+<div id="accordion">
+    <h3>Spring MVC 基本範例 </h3>
+    <div>
+        <p>
+            Application Information 模組演示 <br>
+        <table>
+            <tr>
+                <td>
+                    <a class="button demo" href="jsp/app/appInfo.html">DEMO</a>
+                </td>
+                <td>
+                    <a class="button test" href="appInfo">TEST</a>
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <p>
+            使用註解 <br>
+        <table style="color:white; border: 1px solid white;">
+            <tr>
+                <td>@Controller</td>
+                <td>@Service</td>
+                <td>@Autowired</td>
+            </tr>
+            <tr>
+                <td>@RequestMapping</td>
+                <td>@ResponseBody</td>
+            </tr>
+        </table>
+
+        </p>
+        <p>
+            前端頁面 <br>
+        <table style="color:white; border: 1px solid white;">
+            <tr>
+                <td>JSP : Ajax 資料交換</td>
+            </tr>
+        </table>
+
+        </p>
+
+    </div>
+
+    <h3>Section 2</h3>
+    <div>
+        <p>
+            Write Something ...
+        </p>
+    </div>
+</div>
+
+<hr>
+
+<div id="console" class="console">
+    使用 IntelliJ IDEA 搭建 Spring MVC 專案！
+    部署成功！
+    運行成功！
+</div>
+<script>
+    $(function () {
+        $("#accordion").accordion();
+    });
+</script>
+</body>
+</html>
+

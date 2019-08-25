@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <title>Application Information</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../../static/jquery/jquery-ui.js"></script>
+    <link href="../../static/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body class="content" bgcolor="black">
+<h3></h3>
+<div>
+    <div>
+        <div id="effect" class="ui-widget-content ui-corner-all">
+            <h3 class="ui-widget-header ui-corner-all">Application Information 模組演示</h3>
+            <fieldset>
+                <legend>檔案:</legend>
+                <table style="color:white;">
+                    <tr>
+                        <td>Controller</td>
+                        <td>:</td>
+                        <td>AppInfoController.java</td>
+                    </tr>
+                    <tr>
+                        <td>View</td>
+                        <td>:</td>
+                        <td>web/jsp/app/appInfo.jsp</td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset>
+                <legend>說明:</legend>
+                <p>查詢 位於 res/app/ 目錄下 app.properties 配置檔內容</p>
+                <ul>
+                    <li>JUnitSE.properties</li>
+                    <li>JavaProjSE-v1.0.3.properties</li>
+                    <li>SpringMVE-SE.properties</li>
+                </ul>
+                <p>演示 前端發送 Ajax 參數， 查詢 AppInfo 內容</p>
+            </fieldset>
+
+            <fieldset >
+                <legend>演示:</legend>
+                <table style="color:white;">
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByPositionBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Position (Integer)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByIdBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Id (Long)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByNameBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Name (String)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByIdAndNameBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Id And Name (Long , String)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByMultiPostionBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Multi Position (Integer [])
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByMultiNameBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Multi Name (String [])
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByMultiIdBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Multi Id (List < Integer > )
+                            Reply -> Map < Integer , Object >
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id='queryAppInfoByAppInfoObjectBtn' class="ui-button">QUERY</button>
+                        </td>
+                        <td>
+                            Query AppInfo By Object (AppInfo)
+                            Reply -> Object (AppInfo)
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+
+            <fieldset >
+                <legend>Console</legend>
+                <div id="console" class="console">
+                    ...
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</div>
+<script src="appInfo.js"></script>
+</body>
+</html>

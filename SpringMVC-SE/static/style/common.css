@@ -1,0 +1,53 @@
+.container {
+    text-align: center;
+    min-width: 400px;
+    min-height: 280px;
+    border: 2px solid #001dff;
+    -moz-border-radius: 8px;
+}
+
+.text {
+    border: 2px solid #000000;
+}
+
+.editView {
+    min-width: 400px;
+    min-height: 280px;
+    border: 2px solid #001dff;
+    -moz-border-radius: 8px;
+}
+.content{
+  margin: 10px;
+}
+.console {
+    color: white;
+    padding: 10px;
+    min-width: 400px;
+    min-height: 80px;
+    border: 2px solid #ffffff;
+    -moz-border-radius: 8px;
+}
+
+.button {
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.demo {
+    border-radius: 2px;
+    background-color: #008CBA; /* Green */
+}
+.test {
+    border-radius: 2px;
+    background-color: #4CAF50; /* Green */
+}
+
+.highlightme
+{ background-color:#FFFF00; }
