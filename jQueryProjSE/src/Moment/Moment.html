@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Moment Demo</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../../static/plugin/moment/moment.min.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body class = 'content'>
+    <h1>日期產生器</h1>
+    <p>Using Momomet.js Demo</p>
+    <div id='div1'>
+        <input type="date" id='myDate'>
+        &nbsp;
+        <button id='btnConvert'>Convert</button>
+        <br>
+        <label id='show1'>show Something.</label>
+    </div>
+</body>
+
+</html>
+<script>
+    $(function() {
+        $div1 = $('#div1');
+        $myDate = $div1.find('#myDate');
+        $btnConvert = $div1.find('#btnConvert');
+        $show1 = $div1.find('#show1');
+        $myDate.val(moment().format('YYYY-MM-DD'));
+        $btnConvert.off('click').on('click', function() {
+            var data = ''
+            var tmpDate = moment(new Date($myDate.val()));
+
+            data += tmpDate.format('YYYY-MM-DD');
+            data += '(' + convertWeek(tmpDate.format('d')) + ')';
+            data += '<br>';
+            for (i = 0; i < 60; i++) {
+                tmpDate = tmpDate.add(1, 'days');
+                data += tmpDate.format('YYYY-MM-DD');
+                data += '(' + convertWeek(tmpDate.format('d')) + ')';
+                data += '<br>';
+            }
+            $show1.html(data);
+        });
+    });
+
+    function convertWeek(data) {
+        var week;
+        switch (data) {
+            case '1':
+                week = "一";
+                break;
+            case '2':
+                week = "二";
+                break;
+            case '3':
+                week = "三";
+                break;
+            case '4':
+                week = "四";
+                break;
+            case '5':
+                week = "五";
+                break;
+            case '6':
+                week = "六";
+                break;
+            case '0':
+                week = "日";
+                break;
+        }
+        return week;
+    };
+
+</script>

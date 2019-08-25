@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Checkbox</title>
+    <script src="../../static/jquery/jquery-3.4.1.min.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body class="content">
+    <input id=lock type="checkbox">Lock
+    <button id="lockBtn">Lock</button>
+    <button id="unlockBtn">Unlock</button>
+    <hr>
+    <div id="console" class="console"></div>
+
+
+    <script>
+        $(function() {
+            var $lock = $('#lock');
+            var $lockBtn = $('#lockBtn');
+            var $unlockBtn = $('#unlockBtn');
+            var $console = $('#console');
+            
+            $lock.off('change').on('change', function() {
+                var isLock = $lock.prop('checked');
+                $console.text('isLock : ' + isLock);
+            });
+            
+            $lockBtn.off('click').on('click', function() {
+                $lock.prop('checked', true);
+            });
+            
+            $unlockBtn.off('click').on('click', function() {
+                $lock.prop('checked', false);
+            });
+        });
+    </script>
+
+</body></html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Side Menu</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../../static/jquery/jquery-ui.js"></script>
+    <link href="../../static/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../../static/style/common.css" rel="stylesheet">
+    <link href="SideMent.css" rel="stylesheet">
+</head>
+<body>
+<div id="main" class="content" align="center">
+    <span id='barIcon' style="font-size:30px;cursor:pointer" onclick="switchNav()">&#9776;</span>
+    <h2> 快捷鍵: Alt + 1 </h2>
+    <button id='showBtn' class = 'ui-button ui-widget ui-corner-all'>Show/Hide Side Menu</button>
+    
+    <hr>
+    <div id="console" class="console" hidden></div>
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" id='hideBtn'>&times;</a>
+  <a href="#">JAVA</a>
+  <a href="#">ANDROID</a>
+  <a href="#">SWIFT</a>
+  <a href="#">IOS</a>
+  <a href="#">JAVASCRIPT</a>
+  <a href="#">JQUERY</a>
+  <a href="#">CSS</a>
+</div>
+<script src="SideMent.js"></script>
+</body>
+</html> 
+

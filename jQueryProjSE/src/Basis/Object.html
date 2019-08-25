@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Alert Demo</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="console" class="console">
+    </div>
+	<script>
+        var $console = $('#console')
+		var obj = new Object();
+        var appInfo = {"id":"1", "name":"Enoxs", "desc":"OwO"};
+	    obj['1'] = "OwO";
+	    obj['2'] = "OwO / ";
+	    obj['3'] = "OwO // ";
+        $console.text(obj['1']);
+        $console.append(" , ");
+        $console.append(appInfo["name"])
+        
+	
+	</script>
+</body>
+
+</html>

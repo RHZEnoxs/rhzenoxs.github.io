@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> 下拉式選單測試</title>
+    <script src="../../static/jquery/jquery-3.4.1.min.js"></script>
+    <link href="../../static/Style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <h1>下拉式選單</h1>
+        <select id="selectView">
+            <option value="">請選擇</option>
+        </select>
+        <br>
+        <button id="refreshSelectView">刷新選單</button>
+    </div>
+    <script>
+        $(function() {
+            var $selectView = $('#selectView');
+            var $refreshSelectView = $('#refreshSelectView');
+            
+            $refreshSelectView.off('click').on('click', function() {
+                var lstData = ['OwO', 'OwO / ', 'OwO / Hi'];
+                $selectView.empty();
+                $selectView.append('<option>請選擇</option>');
+                $.each(lstData, function(index, value) {
+                    $selectView.append('<option value="' + value + '">' + value + '</option>');
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saerch Array = { Object }</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3> Waiting 3000 ms to show Message !</h3>
+    <div id="console"></div>
+    <script>
+        $(function() {
+            $console = $('#console');
+            var ms = 3000;
+            setTimeout(function(){
+                $console.text("OwO Message.");
+            },ms);
+        });
+    </script>
+</body>
+
+</html>

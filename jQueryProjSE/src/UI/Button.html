@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Button - jQuery UI</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <script src="../../static/jquery/jquery-ui.js"></script>
+    <link href="../../static/jquery/jquery-ui.css" rel="stylesheet">
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <div class="jsDiv">
+            <h3>JS Buttons</h3>
+            <button>A button element</button>
+            <input type="submit" value="A submit button">
+            <a href="#">An anchor</a>
+        </div>
+        <hr>
+        <div id="cssDiv">
+            <h3>CSS Buttons</h3>
+            <button class="ui-button ui-widget ui-corner-all">A button element</button>
+            <input class="ui-button ui-widget ui-corner-all" type="submit" value="A submit button">
+            <a class="ui-button ui-widget ui-corner-all" href="#">An anchor</a>
+        </div>
+        <div id="iconCssDiv">
+            <h3>CSS Buttons</h3>
+            <button class="ui-button ui-widget ui-corner-all ui-button-icon-only" title="Button with icon only">
+                <span class="ui-icon ui-icon-gear"></span> Button with icon only
+            </button>
+        </div>
+    </div>
+
+
+    <script>
+        $(function() {
+            $(".jsDiv input[type=submit], .jsDiv a, .jsDiv button").button();
+        });
+    </script>
+</body></html>

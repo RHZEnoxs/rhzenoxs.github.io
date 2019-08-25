@@ -1,0 +1,50 @@
+.custom-list {
+    padding-left: 10px;
+    margin-left: 0;
+    padding-right: 0;
+}
+
+.custom-list li {
+    counter-increment: clauseCount;
+    list-style-type: none;
+}
+
+.custom-list li::before {
+    content: "第"counter(clauseCount, cjk-ideographic) "條";
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.custom-list ul li {
+    counter-increment: itemCount;
+    list-style-type: none;
+}
+
+.custom-list ul li::before {
+    content: "("counter(itemCount, cjk-ideographic) ")";
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.custom-list ul ul li {
+    counter-increment: setCount;
+    list-style-type: none;
+}
+
+.custom-list ul ul li::before {
+    content: counter(setCount)".";
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.custom-list ul ul ul li{
+    counter-increment: pointCount;
+    list-style-type: none;
+}
+
+.custom-list ul ul ul li::before {
+    content: "(" counter(pointCount) ")";
+    margin-right: 5px;
+    font-weight: bold;
+}
+

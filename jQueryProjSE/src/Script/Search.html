@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Saerch Array = { Object }</title>
+    <script src="../../static/jquery/jquery-3.4.1.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3> Array Object for Search at JS</h3>
+    <div id="console"></div>
+    <script>
+        $(function() {
+            var $console = $('#console');
+            var dbData = [{
+                    id: 0001,
+                    name: 'Enoxs',
+                    phone: 0912345678
+                },
+                {
+                    id: 0002,
+                    name: 'RHZ',
+                    phone: 0987654321
+                },
+                {
+                    id: 0003,
+                    name: 'OwO',
+                    phone: 0978123456
+                },
+                {
+                    id: 0004,
+                    name: 'OwO / Hello',
+                    phone: 0955111222
+                }
+            ];
+
+            function search(searchValue) {
+                return dbData.findIndex(obj => obj.id == searchValue);
+            }
+
+            var id = 0003;
+            var index = search(id);
+            
+            $console.text(dbData[index].name);
+        });
+    </script>
+</body>
+
+</html>

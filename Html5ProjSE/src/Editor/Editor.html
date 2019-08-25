@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <script src="../../static/jquery/jquery-3.4.1.min.js"></script>
+    <script src="../../static/jquery/jquery-ui.min.js"></script>
+
+    <script src="js/EditUtil.js"></script>
+
+    <link rel="stylesheet" href="../../static/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="style/github-dark.css">
+
+    <link rel="stylesheet" href="Editor.css">
+    <link rel="stylesheet" href="style/Side.css">
+    <link rel="stylesheet" href="../../static/style/common.css">
+</head>
+
+<body>
+
+    <div id="main" class="content">
+        <h1 style="color: #ffffff;">Rich Text Editor</h1>
+        <button id="h1Btn" class="ui-button">H1</button>
+        <button id="h2Btn" class="ui-button">H2</button>
+        <button id="h3Btn" class="ui-button">H3</button>
+        <button id="h4Btn" class="ui-button">H4</button>
+        <button id="h5Btn" class="ui-button">H5</button>
+        <button id="h6Btn" class="ui-button">H6</button>
+        |
+        <button id="pBtn" class="ui-button">P</button>
+        <button id="hrBtn" class="ui-button">Hr</button>
+        |
+        <button id="blodBtn" class="ui-button">Blod</button>
+        |
+        <button id="checkbox" class="ui-button">CheckBox</button>
+        <button id="listBtn" class="ui-button">List</button>
+        <button id="highlightBtn" class="ui-button">HighLight</button>
+        <hr>
+        <button id="insertTxt" title="Text" class="ui-button">Text</button>
+        <button id="insertImg" class="ui-button">Image</button>
+        <button id="insertTable" class="ui-button">Table</button>
+        <button id="insertImgWithId" class="ui-button">Image2</button>
+        <br>
+        <hr>
+        <div id="mEditor" class="markdown-body" contenteditable=true>
+            <h2>Ctrl + 1  開啟側邊欄</h2>
+            <h2>Ctrl 長按 說明對話視窗</h2>
+            <h4>Title#H4</h4>
+            <div>I've been reading books of old</div>
+            <div>The legends and the myths</div>
+            <div>Achilles and his gold</div>
+            <div>Hercules and his gifts</div>
+            <div>Spiderman's control</div>
+            <ul class="">
+                <li>OwO#1</li>
+                <li>OwO#2
+                    <ul>
+                        <li>OwO@3</li>
+                        <li>OwO@4</li>
+                        <li>OwO@5
+                            <ul>
+                                <li>OwO$1</li>
+                                <li>OwO$2</li>
+                                <li>OwO$3
+                                    <ul>
+                                        <li>OwO$1</li>
+                                        <li>OwO$2</li>
+                                    </ul>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="custom-list">
+                <li>OwO#條</li>
+                <ul>
+                    <li>OwO#項</li>
+                    <ul>
+                        <li>OwO#款</li>
+                        <ul>
+                            <li>OwO#點</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </ul>
+            <pre><code>Java - I/O</code></pre>
+            <pre><code>JavaScript - I/O</code></pre>
+            <pre class=" language-java"><code class=" language-java">    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"Hello , OwO"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span></code></pre>
+
+            <br>
+            <p></p>
+        </div>
+        <hr>
+        <div style="padding: 10px;display: none" id="atWrap">
+            <button name="typeA" class="ui-button">Type A</button>
+            <button name="typeB" class="ui-button">Type B</button>
+            <hr>
+        </div>
+        <label for="lock">lock</label>
+        <input type="checkbox" name="lock" id="lock">
+        |
+        <button id="selectBtn" class="ui-button">Selecttion</button>
+        <button id="stateBtn" class="ui-button">Status</button>
+        <button id="tabBtn" class="ui-button">Tab</button>
+        <button id="showBtn" class="ui-button">Show</button>
+        <button id="clearBtn" class="ui-button">Clear</button>
+        <hr>
+        <div id="console" class="console-dark">..</div>
+        <hr>
+        <button id="toMarkdownBtn" class="ui-button">Html to Markdown (Simple)</button>
+        <button id="toHtmlBtn" class="ui-button">Markdown to Html (Simple)</button>
+        <input type="text" value="" id="clipboardBuffer" style="display: none;">
+        <div id="operateDescDialogOpen" title="快捷鍵說明">
+            <table style="border:3px #c90000 dashed; width: 80%" cellpadding="10" border='1' align="center">
+                <thead>
+                    <tr>
+                        <th style='width:20%'>按鍵</th>
+                        <th style='width:30%'>說明</th>
+                        <th style='width:20%'>按鍵</th>
+                        <th style='width:30%'>說明</th>
+                    </tr>
+                    <tr>
+                        <td>Tab</td>
+                        <td>縮排</td>
+                        <td>Shift + Enter</td>
+                        <td>換行</td>
+                    </tr>
+                    <tr>
+                        <td>Shift + Tab</td>
+                        <td>反向縮排</td>
+                        <td>Ctrl + O</td>
+                        <td>開啟文件</td>
+                    </tr>
+                    <tr>
+                        <td>Ctrl + H</td>
+                        <td>快速註記</td>
+                        <td>Ctrl + T</td>
+                        <td>新增表格</td>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <div id="sideNav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" id='hideBtn'>&times;</a>
+        <a href="#">To Do - List</a>
+        <a href="#">To Do - Pool</a>
+    </div>
+
+
+    <script src="Editor.js"></script>
+</body>
+
+</html>

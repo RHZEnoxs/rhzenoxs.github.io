@@ -1,0 +1,27 @@
+.container {
+    text-align: center;
+    min-width: 400px;
+    min-height: 280px;
+    border: 2px solid #001dff;
+    -moz-border-radius: 8px;
+}
+
+.editView {
+    min-width: 400px;
+    min-height: 280px;
+    border: 2px solid #001dff;
+    -moz-border-radius: 8px;
+}
+.content{
+  margin: 10px;
+}
+.console {
+    padding: 10px;
+    min-width: 400px;
+    min-height: 80px;
+    border: 2px solid #000000;
+    -moz-border-radius: 8px;
+}
+
+.highlightme
+{ background-color:#FFFF00; }

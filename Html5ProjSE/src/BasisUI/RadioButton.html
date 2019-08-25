@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Radio Button</title>
+    <script src="../../static/jquery/jquery-3.4.1.min.js"></script>
+    <link href="../../static/style/common.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="content">
+        <laber>Yes / No</laber>
+        <input name="choice" type="radio" value="1" />Yes
+        <input name="choice" type="radio" value="0" />No
+        <div id='console' class="console"></div>
+    </div>
+    <script>
+        $(function() {
+            var $choice = $('[name=choice]');
+            var $console = $('#console');
+            $choice.off('change').on('change', function() {
+                let choice = $("[name=choice]:checked").val();
+                if (choice == 1) {
+                    $console.text('choice : Yes');
+                } else {
+                    $console.text('choice : No');
+                }
+
+            });
+        });
+    </script>
+</body></html>
